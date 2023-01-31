@@ -165,7 +165,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         else:
             sendMessage(start_string, context.bot, update.message, reply_markup)
     else:
-        text = f"Not Authorized user, deploy your own mirror bot"
+        text = f"ONLY PREMIUM USERS ARE PERMITTED TO USE ME ON PM CLICK THE BUTTON BELOW TO PURCHASE PAID MEMBERSHIP"
         if config_dict['PICS']:
             sendPhoto(text, context.bot, update.message, rchoice(config_dict['PICS']), reply_markup)
         else:
@@ -206,7 +206,7 @@ def log(update, context):
 
 
 help_string = '''
-<b><a href='https://github.com/weebzone/WZML'>WeebZone</a></b> - The Ultimate Telegram MIrror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
+<b><a href='https://t.me/cyber_mirror'>Cyber Mirror</a></b> - The Ultimate Telegram MIrror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
 Choose a help category:
 '''
 
