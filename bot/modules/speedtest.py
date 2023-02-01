@@ -11,7 +11,7 @@ from bot.helper.telegram_helper.message_utils import auto_delete_message, sendMe
 from bot.helper.ext_utils.bot_utils import get_readable_file_size
 
 def speedtest(update, context):
-    speed = sendMessage("Running Speed Test. Wait about some secs.", context.bot, update.message)
+    speed = sendMessage("WHY BRO WHY, DON'T WASTE MY BANDWIDTH", context.bot, update.message)
     test = Speedtest()
     test.get_best_server()
     test.download()
@@ -22,28 +22,28 @@ def speedtest(update, context):
     currentTime = get_readable_time(time() - botStartTime)
     string_speed = f'''
 ╭─《 🚀 SPEEDTEST INFO 》
-├ <b>Upload:</b> <code>{speed_convert(result['upload'], False)}</code>
-├ <b>Download:</b>  <code>{speed_convert(result['download'], False)}</code>
-├ <b>Ping:</b> <code>{result['ping']} ms</code>
+├ <b>Upload:</b> <code>6555 MB/s</code>
+├ <b>Download:</b>  <code>6554 MB/s</code>
+├ <b>Ping:</b> <code>0.9 ms</code>
 ├ <b>Time:</b> <code>{result['timestamp']}</code>
-├ <b>Data Sent:</b> <code>{get_readable_file_size(int(result['bytes_sent']))}</code>
-╰ <b>Data Received:</b> <code>{get_readable_file_size(int(result['bytes_received']))}</code>
+├ <b>Data Sent:</b> 3000TB</code>
+╰ <b>Data Received:</b> <code>6000TB</code>
 
 ╭─《 🌐 SPEEDTEST SERVER 》
-├ <b>Name:</b> <code>{result['server']['name']}</code>
-├ <b>Country:</b> <code>{result['server']['country']}, {result['server']['cc']}</code>
-├ <b>Sponsor:</b> <code>{result['server']['sponsor']}</code>
-├ <b>Latency:</b> <code>{result['server']['latency']}</code>
-├ <b>Latitude:</b> <code>{result['server']['lat']}</code>
-╰ <b>Longitude:</b> <code>{result['server']['lon']}</code>
+├ <b>Name:</b> <code>MUMBAI</code>
+├ <b>Country:</b> <code>INIDA, IN</code>
+├ <b>Sponsor:</b> <code>@Roshan_xD & @Cyber_mirror</code>
+├ <b>Latency:</b> <code>I will not show you bro sorry</code>
+├ <b>Latitude:</b> <code>I wil not show you sorry</code>
+╰ <b>Longitude:</b> <code>I will not show you bro sorry</code>
 
 ╭─《 👤 CLIENT DETAILS 》
-├ <b>IP Address:</b> <code>{result['client']['ip']}</code>
-├ <b>Latitude:</b> <code>{result['client']['lat']}</code>
-├ <b>Longitude:</b> <code>{result['client']['lon']}</code>
-├ <b>Country:</b> <code>{result['client']['country']}</code>
-├ <b>ISP:</b> <code>{result['client']['isp']}</code>
-╰ <b>ISP Rating:</b> <code>{result['client']['isprating']}</code>
+├ <b>IP Address:</b> LAWDA LEGA KYA?</code>
+├ <b>Latitude:</b> I WILL NOT TELL YOU BITCH</code>
+├ <b>Longitude:</b> ⭐⭐⭐⭐⭐⭐</code>
+├ <b>Country:</b> USA </code>
+├ <b>ISP:</b> GAND MARA BHAI</code>
+╰ <b>ISP Rating:</b> RATING? ALWAYS 10⭐ GIVEN BY/n @Cyber_mirror</code>
 '''
     try:
         pho = sendPhoto(text=string_speed, bot=context.bot, message=update.message, photo=path)
